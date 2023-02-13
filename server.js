@@ -22,4 +22,4 @@ app.use(express.urlencoded({ extended: true }));
 // (inscription, connexion, oneUser, allUser , ca se passe dans cette route)
 app.use("/api/user", userRoute);
 
-app.listen(1000, console.log("server 1000 is running"));
+app.listen(5500, console.log("server 5500 is running"));
