@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 
+mongoose.set("strictQuery", true);
+
 mongoose.connect(
   "mongodb+srv://" +
     process.env.DB_USERNAME_AND_PASSWORD +
