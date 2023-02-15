@@ -2,6 +2,26 @@ const userModel = require("../models/user.model");
 const ObjectID = require("mongoose").Types.ObjectId;
 const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+// mettre photo de profil
+const cloudinary = require("cloudinary").v2;
+const sharp = require("sharp");
+//
+cloudinary.config({
+  cloud_name: "rasivyy",
+  api_key: "599176842647747",
+  api_secret: "OwpCImclbCniesVvDryv1c3pvSE",
+});
+//
+const { Readable } = require("stream");
+const bufferToStream = (buffer) => {
+  const readable = new Readable({
+    read() {
+      this.push(buffer);
+      this.push(null);
+    },
+  });
+  return readable;
+};
 
 // ici c'est pour creer le token qui sera utiliser à la partie connexion
 const maxAge = 90 * 24 * 60 * 60 * 1000;
@@ -120,6 +140,25 @@ module.exports.oneUser = async (req, res) => {
       .select("-password");
   } catch (err) {
     // on cas d'echec, message d'erreur
+    return res.status(500).json(err);
+  }
+};
+
+// mettre photo profil
+module.exports.photoProfil = async (req, res) => {
+  try {
+    // ici on reduit le poids de l'image sans perdre la qualité
+    const data = await sharp(req.file.buffer).webp({ quality: 20 }).toBuffer();
+    const stream = cloudinary.uploader.upload_stream(
+      { folder: "Alrani - Photo Profil" },
+      (error, result) => {
+        if (error) return console.error(error);
+        // ici on renvoie l'URL de l'image après l'upload sur cloudinary
+        return res.json({ urlPhotoProfil: result.secure_url });
+      }
+    );
+    bufferToStream(data).pipe(stream);
+  } catch (err) {
     return res.status(500).json(err);
   }
 };
