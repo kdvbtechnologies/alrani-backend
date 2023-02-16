@@ -98,6 +98,7 @@ module.exports.login = async (req, res) => {
       message: "Connexion réussie !",
       idAuteur: user._id,
       nomAuteur: user.nomAuteur,
+      photoProfil: user.photoProfil,
     });
   } catch (err) {
     // on cas d'echec, on envoie cet erreur 400
