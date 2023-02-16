@@ -181,8 +181,6 @@ module.exports.updateUserInfos = async(req, res) => {
         await user.updateOne({ nomAuteur, email, password, photoProfil });
         res.status(200).json({
           message: "Success !"
-          idAuteur: user._id,
-          nomAuteur: user.nomAuteur,
         })
       }
   } catch(err) {

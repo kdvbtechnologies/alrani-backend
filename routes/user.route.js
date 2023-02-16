@@ -18,6 +18,6 @@ userRouter.post("/login", login);
 userRouter.get("/:id", oneUser);
 userRouter.get("/", allUser);
 userRouter.post("/upload", upload.single("image"), photoProfil);
-userRouter.put("/update", updateUserInfos );
+userRouter.put("/update/:id", updateUserInfos );
 
 module.exports = userRouter;
