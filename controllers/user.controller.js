@@ -162,3 +162,31 @@ module.exports.photoProfil = async (req, res) => {
     return res.status(500).json(err);
   }
 };
+
+// ajouter l'url de la photo au profil 
+// ajouter l'url de la photo au profil 
+// cette logique permet aussi de modifier les infos de l'utilisateur
+module.exports.updateUserInfos = async(req, res) => {
+  // on verifie si l'id envoyer dans la requete existe dans la bdd
+  // si l'id n'existe pas, on envoie ce message d'erreur
+    if(!ObjectID.isValid(req.params.id))
+    return res.status(400).send("ID unknown : " + req.params.id);
+
+    const { nomAuteur, email, password, photoProfil } = req.body;
+
+    try {
+      const user = await userModel.findById(req.params.id);
+      if (user.userId === req.body.userId) {
+        // updateOne est une fonction de mongodb pour modifier les donnees de 1 utilisateur
+        await user.updateOne({ nomAuteur, email, password, photoProfil });
+        res.status(200).json({
+          message: "Success !"
+          idAuteur: user._id,
+          nomAuteur: user.nomAuteur,
+        })
+      }
+  } catch(err) {
+    // on cas d'echec, message d'erreur
+    res.status(500).json(err)
+  }
+}

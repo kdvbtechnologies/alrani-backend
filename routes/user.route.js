@@ -5,6 +5,7 @@ const {
   oneUser,
   allUser,
   photoProfil,
+  updateUserInfos,
 } = require("../controllers/user.controller");
 const userRouter = express.Router();
 // photo de profil
@@ -17,5 +18,6 @@ userRouter.post("/login", login);
 userRouter.get("/:id", oneUser);
 userRouter.get("/", allUser);
 userRouter.post("/upload", upload.single("image"), photoProfil);
+userRouter.put("/update", updateUserInfos );
 
 module.exports = userRouter;
