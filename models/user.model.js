@@ -28,6 +28,14 @@ const UserSchema = new mongoose.Schema(
     photoProfil: {
       type: String,
     },
+
+    badgeVerified: {
+      type: String,
+    },
+
+    utilisateur: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
