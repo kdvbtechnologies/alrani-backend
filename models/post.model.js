@@ -17,6 +17,18 @@ const PostSchema = new mongoose.Schema(
     descriptionPost: {
       type: String,
     },
+
+    visibleProfil: {
+      type: String,
+    },
+
+    visibleProfilOthers: {
+      type: String,
+    },
+
+    visibleAccueil: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
