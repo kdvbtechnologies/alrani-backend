@@ -2,10 +2,6 @@ const mongoose = require("mongoose");
 
 const PostSchema = new mongoose.Schema(
   {
-    urlImagePost: {
-      type: String,
-    },
-
     idAuteur: {
       type: String,
     },
@@ -15,6 +11,10 @@ const PostSchema = new mongoose.Schema(
     },
 
     descriptionPost: {
+      type: String,
+    },
+
+    urlImagePost: {
       type: String,
     },
 
