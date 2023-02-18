@@ -174,13 +174,13 @@ module.exports.updateUserInfos = async (req, res) => {
   if (!ObjectID.isValid(req.params.id))
     return res.status(400).send("ID unknown : " + req.params.id);
 
-  const { nomAuteur, email, password, photoProfil } = req.body;
+  const { nomAuteur, email, password, photoProfil, badgeVerified, utilisateur } = req.body;
 
   try {
     const user = await userModel.findById(req.params.id);
     if (user.userId === req.body.userId) {
       // updateOne est une fonction de mongodb pour modifier les donnees de 1 utilisateur
-      await user.updateOne({ nomAuteur, email, password, photoProfil });
+      await user.updateOne({ nomAuteur, email, password, photoProfil, badgeVerified, utilisateur });
       res.status(200).json({
         message: "Success !",
       });
