@@ -5,6 +5,18 @@ const PostSchema = new mongoose.Schema(
     idAuteur: {
       type: String,
     },
+	
+	nomAuteur: {
+      type: String,
+    },
+	
+	photoProfil: {
+      type: String,
+    },
+	
+	badgeVerified: {
+      type: String,
+    },
 
     descriptionPost: {
       type: String,
