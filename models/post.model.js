@@ -6,10 +6,6 @@ const PostSchema = new mongoose.Schema(
       type: String,
     },
 
-    nomAuteur: {
-      type: String,
-    },
-
     descriptionPost: {
       type: String,
     },
