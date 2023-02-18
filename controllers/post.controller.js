@@ -64,7 +64,7 @@ module.exports.updatePost = async (req, res) => {
     const post = await postModel.findById(req.params.id);
     if (post.userId === req.body.userId) {
       await post.updateOne({ $set: req.body });
-      res.status(200).json("Mise à jour réussi avec succèss !");
+      res.status(200).json("Publication modifiée avec succèss !");
     }
   } catch (err) {
     // en cas d'echec, message d'erreur

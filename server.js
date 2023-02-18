@@ -5,6 +5,8 @@ const express = require("express");
 const app = express();
 const userRoute = require("./routes/user.route");
 const postRoute = require("./routes/post.route");
+const commentRoute = require("./routes/comment.route");
+const reponseRoute = require("./routes/reponse.route");
 
 const cors = require("cors");
 const corsOptions = {
@@ -23,5 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 // (inscription, connexion, oneUser, allUser , ca se passe dans cette route)
 app.use("/api/user", userRoute);
 app.use("/api/post", postRoute);
+app.use("/api/comment", commentRoute);
+app.use("/api/reponse", reponseRoute);
 
 app.listen(5500, console.log("server 5500 is running"));
