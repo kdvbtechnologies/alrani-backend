@@ -17,6 +17,10 @@ const PostSchema = new mongoose.Schema(
 	badgeVerified: {
       type: String,
     },
+	
+	nbreDeVue: {
+      type: String,
+    },
 
     descriptionPost: {
       type: String,
