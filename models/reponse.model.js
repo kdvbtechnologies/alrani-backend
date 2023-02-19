@@ -33,6 +33,10 @@ const ReponseSchema = new mongoose.Schema(
     idDuProprietaireDuPost: {
       type: String,
     },
+	
+	idCommentaire: {
+      type: String,
+    },
 
     idDuProprietaireDuCommentaire: {
       type: String,
