@@ -17,6 +17,10 @@ const AbonnerSchema = new mongoose.Schema(
     photoProfilAbonne: {
       type: String,
     },
+	
+	badgeVerifiedAbonne: {
+      type: String,
+    },
 
     idDuBeneficiaire: {
       type: String,
@@ -31,6 +35,10 @@ const AbonnerSchema = new mongoose.Schema(
     },
 
     photoProfilBeneficiaire: {
+      type: String,
+    },
+	
+	badgeVerifiedBeneficiaire: {
       type: String,
     },
   },
