@@ -57,6 +57,10 @@ const PostSchema = new mongoose.Schema(
 	buttonActiver: {
       type: String,
     },
+	
+	postStyle: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
