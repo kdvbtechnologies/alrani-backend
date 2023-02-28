@@ -9,6 +9,8 @@ const commentRoute = require("./routes/comment.route");
 const reponseRoute = require("./routes/reponse.route");
 const abonnerRoute = require("./routes/abonner.route");
 const vueRoute = require("./routes/vue.route");
+const conversationRoute = require("./routes/conversation.route");
+const messageRoute = require("./routes/message.route");
 
 const cors = require("cors");
 const corsOptions = {
@@ -31,5 +33,7 @@ app.use("/api/comment", commentRoute);
 app.use("/api/reponse", reponseRoute);
 app.use("/api/abonner", abonnerRoute);
 app.use("/api/vue", vueRoute);
+app.use("/api/conversation", conversationRoute);
+app.use("/api/message", messageRoute);
 
 app.listen(5500, console.log("server 5500 is running"));

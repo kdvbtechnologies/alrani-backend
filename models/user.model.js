@@ -36,8 +36,12 @@ const UserSchema = new mongoose.Schema(
     utilisateur: {
       type: String,
     },
-	
-	pays: {
+
+    pays: {
+      type: String,
+    },
+
+    enLigne: {
       type: String,
     },
   },

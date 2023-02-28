@@ -36,7 +36,8 @@ const createToken = (id) => {
 // inscription
 // inscription
 module.exports.signup = async (req, res) => {
-  const { nomAuteur, email, password, badgeVerified, utilisateur, pays } = req.body;
+  const { nomAuteur, email, password, badgeVerified, utilisateur, pays } =
+    req.body;
   // on verifie en fonction de l'email si la personne ne s'etait pas deja inscrite auparavant
   const user = await userModel.findOne({ email }).exec();
   if (user) {
@@ -56,7 +57,7 @@ module.exports.signup = async (req, res) => {
       password: hashedPassword,
       badgeVerified,
       utilisateur,
-	  pays,
+      pays,
     });
     res.status(200).json({
       message: "Inscription réussi avec succès ! ",
@@ -167,7 +168,6 @@ module.exports.photoProfil = async (req, res) => {
 };
 
 // ajouter l'url de la photo au profil
-// ajouter l'url de la photo au profil
 // cette logique permet aussi de modifier les infos de l'utilisateur
 module.exports.updateUserInfos = async (req, res) => {
   // on verifie si l'id envoyer dans la requete existe dans la bdd
@@ -175,13 +175,31 @@ module.exports.updateUserInfos = async (req, res) => {
   if (!ObjectID.isValid(req.params.id))
     return res.status(400).send("ID unknown : " + req.params.id);
 
-  const { nomAuteur, email, password, photoProfil, badgeVerified, utilisateur, pays } = req.body;
+  const {
+    nomAuteur,
+    email,
+    password,
+    photoProfil,
+    badgeVerified,
+    utilisateur,
+    pays,
+    enLigne,
+  } = req.body;
 
   try {
     const user = await userModel.findById(req.params.id);
     if (user.userId === req.body.userId) {
       // updateOne est une fonction de mongodb pour modifier les donnees de 1 utilisateur
-      await user.updateOne({ nomAuteur, email, password, photoProfil, badgeVerified, utilisateur, pays });
+      await user.updateOne({
+        nomAuteur,
+        email,
+        password,
+        photoProfil,
+        badgeVerified,
+        utilisateur,
+        pays,
+        enLigne,
+      });
       res.status(200).json({
         message: "Success !",
       });
