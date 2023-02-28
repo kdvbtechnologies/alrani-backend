@@ -13,6 +13,10 @@ const MessageSchema = new mongoose.Schema(
     idAuteurMessage: {
       type: String,
     },
+	
+	imageMessage: {
+      type: String,
+    },
 
     dateDenvoi: {
       type: String,
