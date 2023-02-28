@@ -44,6 +44,10 @@ const UserSchema = new mongoose.Schema(
     enLigne: {
       type: String,
     },
+	
+	buttonActiver: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
