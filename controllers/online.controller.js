@@ -9,7 +9,12 @@ module.exports.createOnline = async (req, res) => {
   try {
     // enregistrer la personne en ligne dans la bdd
     const save = await online.save();
-    res.status(200).json(save);
+    res.status(200).json({
+      id: save._id,
+      date: save.createdAt,
+      status: save.status,
+      idAuteur: save.idAuteur,
+    });
   } catch (err) {
     // en cas d'echec, message d'erreur
     return res.status(500).json(err);
