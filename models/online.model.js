@@ -5,6 +5,10 @@ const OnlineSchema = new mongoose.Schema(
     idAuteur: {
       type: String,
     },
+	
+	nomAuteur: {
+      type: String,
+    },
 
     status: {
       type: String,
