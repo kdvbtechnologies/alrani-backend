@@ -9,6 +9,22 @@ const OnlineSchema = new mongoose.Schema(
     status: {
       type: String,
     },
+	
+	adresseIp: {
+      type: String,
+    },
+	
+	countryIp: {
+      type: String,
+    },
+	
+	cityIp: {
+      type: String,
+    },
+	
+	page: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
