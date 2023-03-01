@@ -17,10 +17,6 @@ const MessageSchema = new mongoose.Schema(
 	imageMessage: {
       type: String,
     },
-
-    dateDenvoi: {
-      type: String,
-    },
   },
   { timestamps: true }
 );
