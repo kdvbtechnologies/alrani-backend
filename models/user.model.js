@@ -45,6 +45,10 @@ const UserSchema = new mongoose.Schema(
       type: String,
     },
 	
+	descriptionAuteur: {
+      type: String,
+    },
+	
 	buttonActiverSurLeProfil: {
       type: String,
     },
