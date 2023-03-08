@@ -184,6 +184,7 @@ module.exports.updateUserInfos = async (req, res) => {
     utilisateur,
     pays,
     enLigne,
+	descriptionAuteur,
 	buttonActiverSurLeProfil,
   } = req.body;
 
@@ -200,6 +201,7 @@ module.exports.updateUserInfos = async (req, res) => {
         utilisateur,
         pays,
         enLigne,
+		descriptionAuteur,
 		buttonActiverSurLeProfil,
       });
       res.status(200).json({
