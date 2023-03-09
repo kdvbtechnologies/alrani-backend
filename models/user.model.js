@@ -41,7 +41,7 @@ const UserSchema = new mongoose.Schema(
       type: String,
     },
 	
-	paragrapheUnHistoireUn: {
+	paragrapheHistoire: {
       type: String,
     },
 
