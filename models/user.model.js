@@ -41,7 +41,7 @@ const UserSchema = new mongoose.Schema(
       type: String,
     },
 	
-	descriptionAuteur: {
+	paragrapheUnHistoireUn: {
       type: String,
     },
 
