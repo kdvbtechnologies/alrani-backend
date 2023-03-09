@@ -182,9 +182,10 @@ module.exports.updateUserInfos = async (req, res) => {
     photoProfil,
     badgeVerified,
     utilisateur,
-    pays,
-    enLigne,
+    paysAuteur,
 	descriptionAuteur,
+	serviceOuOccupation,
+	enLigne,
 	buttonActiverSurLeProfil,
   } = req.body;
 
@@ -199,9 +200,10 @@ module.exports.updateUserInfos = async (req, res) => {
         photoProfil,
         badgeVerified,
         utilisateur,
-        pays,
-        enLigne,
+        paysAuteur,
 		descriptionAuteur,
+		serviceOuOccupation,
+		enLigne,
 		buttonActiverSurLeProfil,
       });
       res.status(200).json({

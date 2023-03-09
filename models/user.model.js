@@ -37,15 +37,19 @@ const UserSchema = new mongoose.Schema(
       type: String,
     },
 
-    pays: {
-      type: String,
-    },
-
-    enLigne: {
+    paysAuteur: {
       type: String,
     },
 	
 	descriptionAuteur: {
+      type: String,
+    },
+
+	serviceOuOccupation: {
+      type: String,
+    },
+	
+    enLigne: {
       type: String,
     },
 	
