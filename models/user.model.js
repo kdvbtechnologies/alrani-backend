@@ -40,6 +40,10 @@ const UserSchema = new mongoose.Schema(
 	ageAuteur: {
       type: String,
     },
+	
+	genreAuteur: {
+      type: String,
+    },
 
     paysAuteur: {
       type: String,
