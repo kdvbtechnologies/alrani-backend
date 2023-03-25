@@ -12,6 +12,7 @@ const vueRoute = require("./routes/vue.route");
 const conversationRoute = require("./routes/conversation.route");
 const messageRoute = require("./routes/message.route");
 const onlineRoute = require("./routes/online.route");
+const adminRoute = require("./routes/admin.route");
 
 const cors = require("cors");
 const corsOptions = {
@@ -37,5 +38,6 @@ app.use("/api/vue", vueRoute);
 app.use("/api/conversation", conversationRoute);
 app.use("/api/message", messageRoute);
 app.use("/api/online", onlineRoute);
+app.use("/api/admin", adminRoute);
 
 app.listen(5500, console.log("server 5500 is running"));
