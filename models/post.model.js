@@ -61,6 +61,18 @@ const PostSchema = new mongoose.Schema(
 	postStyle: {
       type: String,
     },
+	
+	idAdmin: {
+      type: String,
+    },
+	
+	nomAdmin: {
+      type: String,
+    },
+	
+	roleAdmin: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
