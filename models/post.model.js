@@ -73,6 +73,14 @@ const PostSchema = new mongoose.Schema(
 	roleAdmin: {
       type: String,
     },
+	
+	postApprouver: {
+      type: String,
+    },
+	
+	urlVideo: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
