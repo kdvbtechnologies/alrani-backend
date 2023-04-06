@@ -109,7 +109,7 @@ module.exports.publierVideo = async (req, res) => {
       storage,
       limits: {
         fieldNameSize: 200,
-        fileSize: 30 * 1024 * 1024,
+        fileSize: 30 * 100000 * 10000, // la taille maximale de la vidéo est de 30GB
       },
       fileFilter,
     }).single("video");
