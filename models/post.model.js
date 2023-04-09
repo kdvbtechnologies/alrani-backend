@@ -81,6 +81,10 @@ const PostSchema = new mongoose.Schema(
 	urlVideo: {
       type: String,
     },
+	
+	photoCouvertureVideo: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
