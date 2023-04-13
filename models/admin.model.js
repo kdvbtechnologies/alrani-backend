@@ -26,7 +26,7 @@ const AdminSchema = new mongoose.Schema(
       type: String,
     },
 	
-	rolePage: {
+	serviceOuOccupationPage: {
       type: String,
     },
 
