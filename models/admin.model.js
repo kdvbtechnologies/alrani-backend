@@ -29,6 +29,10 @@ const AdminSchema = new mongoose.Schema(
     badgeVerifiedPage: {
       type: String,
     },
+	
+	photoProfilPage: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
