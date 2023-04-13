@@ -25,6 +25,10 @@ const AdminSchema = new mongoose.Schema(
     nomPage: {
       type: String,
     },
+	
+	rolePage: {
+      type: String,
+    },
 
     badgeVerifiedPage: {
       type: String,
