@@ -14,7 +14,7 @@ const AdminSchema = new mongoose.Schema(
       type: String,
     },
 
-    badgeVerified: {
+    badgeVerifiedAdmin: {
       type: String,
     },
 
