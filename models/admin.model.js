@@ -17,6 +17,10 @@ const AdminSchema = new mongoose.Schema(
     badgeVerifiedAdmin: {
       type: String,
     },
+	
+	postApprouverAdmin: {
+      type: String,
+    },
 
     idPage: {
       type: String,
