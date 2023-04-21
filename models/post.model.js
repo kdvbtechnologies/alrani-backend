@@ -41,18 +41,6 @@ const PostSchema = new mongoose.Schema(
 	urlImage3: {
       type: String,
     },
-
-    visibleProfil: {
-      type: String,
-    },
-
-    visibleProfilOthers: {
-      type: String,
-    },
-
-    visibleAccueil: {
-      type: String,
-    },
 	
 	buttonActiver: {
       type: String,
@@ -83,6 +71,10 @@ const PostSchema = new mongoose.Schema(
     },
 	
 	photoCouvertureVideo: {
+      type: String,
+    },
+	
+	visible: {
       type: String,
     },
   },

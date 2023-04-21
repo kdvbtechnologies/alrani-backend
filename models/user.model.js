@@ -64,6 +64,10 @@ const UserSchema = new mongoose.Schema(
 	buttonActiverSurLeProfil: {
       type: String,
     },
+	
+	visible: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
