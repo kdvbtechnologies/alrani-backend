@@ -189,6 +189,7 @@ module.exports.updateUserInfos = async (req, res) => {
 	serviceOuOccupation,
 	enLigne,
 	buttonActiverSurLeProfil,
+	visible,
   } = req.body;
 
   try {
@@ -209,6 +210,7 @@ module.exports.updateUserInfos = async (req, res) => {
 		serviceOuOccupation,
 		enLigne,
 		buttonActiverSurLeProfil,
+		visible,
       });
       res.status(200).json({
         message: "Success !",
