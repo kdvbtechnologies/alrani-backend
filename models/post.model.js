@@ -77,10 +77,6 @@ const PostSchema = new mongoose.Schema(
 	visible: {
       type: String,
     },
-	
-	proprietairePage: {
-      type: String,
-    },
   },
   { timestamps: true }
 );
