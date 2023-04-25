@@ -17,6 +17,10 @@ const MessageSchema = new mongoose.Schema(
 	imageMessage: {
       type: String,
     },
+	
+	urlVideo: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
