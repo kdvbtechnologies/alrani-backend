@@ -36,7 +36,7 @@ const createToken = (id) => {
 // inscription
 // inscription
 module.exports.signup = async (req, res) => {
-  const { nomAuteur, email, password, badgeVerified, utilisateur, buttonActiverSurLeProfil, visible } =
+  const { nomAuteur, email, password, badgeVerified, utilisateur, buttonActiverSurLeProfil, visible, photoProfil } =
     req.body;
   // on verifie en fonction de l'email si la personne ne s'etait pas deja inscrite auparavant
   const user = await userModel.findOne({ email }).exec();
@@ -58,7 +58,8 @@ module.exports.signup = async (req, res) => {
       badgeVerified,
       utilisateur,
       buttonActiverSurLeProfil, 
-	  visible
+	  visible,
+	  photoProfil,
     });
     res.status(200).json({
       message: "Inscription réussi avec succès ! ",
