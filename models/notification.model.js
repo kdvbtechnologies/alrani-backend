@@ -13,6 +13,14 @@ const NotificationSchema = new mongoose.Schema(
     notification: {
       type: String,
     },
+	
+	lu: {
+      type: String,
+    },
+	
+	parle: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
