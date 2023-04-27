@@ -2,19 +2,27 @@ const mongoose = require("mongoose");
 
 const NotificationSchema = new mongoose.Schema(
   {
-	idDestinataireNotification: {
+	idDestinataire: {
       type: String,
     },
 	
-	nomDestinataireNotification: {
+	nomDestinataire: {
       type: String,
     },
 	
-    idAuteurNotification: {
+    idDeLaPersonneQuiInforme: {
       type: String,
     },
 
-    nomAuteurNotification: {
+    nomDeLaPersonneQuiInforme: {
+      type: String,
+    },
+	
+	photoProfilDeLaPersonneQuiInforme: {
+      type: String,
+    },
+	
+	badgeVerifiedDeLaPersonneQuiInforme: {
       type: String,
     },
 
