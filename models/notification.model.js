@@ -41,6 +41,10 @@ const NotificationSchema = new mongoose.Schema(
 	idConversation: {
       type: String,
     },
+	
+	idInitieur: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
