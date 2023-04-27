@@ -29,6 +29,10 @@ const NotificationSchema = new mongoose.Schema(
 	parle: {
       type: String,
     },
+	
+	idConversation: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
