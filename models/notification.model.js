@@ -2,6 +2,14 @@ const mongoose = require("mongoose");
 
 const NotificationSchema = new mongoose.Schema(
   {
+	idDestinataireNotification: {
+      type: String,
+    },
+	
+	nomDestinataireNotification: {
+      type: String,
+    },
+	
     idAuteurNotification: {
       type: String,
     },
