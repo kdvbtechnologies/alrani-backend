@@ -36,8 +36,16 @@ const createToken = (id) => {
 // inscription
 // inscription
 module.exports.signup = async (req, res) => {
-  const { nomAuteur, email, password, badgeVerified, utilisateur, buttonActiverSurLeProfil, visible, photoProfil } =
-    req.body;
+  const {
+    nomAuteur,
+    email,
+    password,
+    badgeVerified,
+    utilisateur,
+    buttonActiverSurLeProfil,
+    visible,
+    photoProfil,
+  } = req.body;
   // on verifie en fonction de l'email si la personne ne s'etait pas deja inscrite auparavant
   const user = await userModel.findOne({ email }).exec();
   if (user) {
@@ -57,9 +65,9 @@ module.exports.signup = async (req, res) => {
       password: hashedPassword,
       badgeVerified,
       utilisateur,
-      buttonActiverSurLeProfil, 
-	  visible,
-	  photoProfil,
+      buttonActiverSurLeProfil,
+      visible,
+      photoProfil,
     });
     res.status(200).json({
       message: "Inscription réussi avec succès ! ",
@@ -184,14 +192,14 @@ module.exports.updateUserInfos = async (req, res) => {
     photoProfil,
     badgeVerified,
     utilisateur,
-	ageAuteur,
-	genreAuteur,
+    ageAuteur,
+    genreAuteur,
     paysAuteur,
-	paragrapheHistoire,
-	serviceOuOccupation,
-	enLigne,
-	buttonActiverSurLeProfil,
-	visible,
+    paragrapheHistoire,
+    serviceOuOccupation,
+    enLigne,
+    buttonActiverSurLeProfil,
+    visible,
   } = req.body;
 
   try {
@@ -205,14 +213,14 @@ module.exports.updateUserInfos = async (req, res) => {
         photoProfil,
         badgeVerified,
         utilisateur,
-		ageAuteur,
-		genreAuteur,
+        ageAuteur,
+        genreAuteur,
         paysAuteur,
-		paragrapheHistoire,
-		serviceOuOccupation,
-		enLigne,
-		buttonActiverSurLeProfil,
-		visible,
+        paragrapheHistoire,
+        serviceOuOccupation,
+        enLigne,
+        buttonActiverSurLeProfil,
+        visible,
       });
       res.status(200).json({
         message: "Success !",
