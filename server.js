@@ -17,7 +17,7 @@ const adminRoute = require("./routes/admin.route");
 
 const cors = require("cors");
 const corsOptions = {
-  origin: "https://alrani.com",
+  origin: "https://alrani.netlify.app",
   credentials: true,
   allowedHeaders: ["sessionId", "Content-Type"],
   exposedHeaders: ["sessionId"],
