@@ -1,7 +1,8 @@
 const userModel = require("../models/user.model");
 const ObjectID = require("mongoose").Types.ObjectId;
 const bcryptjs = require("bcryptjs");
-const jwt = require("jsonwebtoken");
+//const jwt = require("jsonwebtoken");
+
 // mettre photo de profil
 const cloudinary = require("cloudinary").v2;
 const sharp = require("sharp");
@@ -23,6 +24,7 @@ const bufferToStream = (buffer) => {
   return readable;
 };
 
+/*
 // ici c'est pour creer le token qui sera utiliser à la partie connexion
 const maxAge = 90 * 24 * 60 * 60 * 1000;
 const createToken = (id) => {
@@ -30,6 +32,7 @@ const createToken = (id) => {
     expiresIn: maxAge,
   });
 };
+*/
 
 // inscription
 // inscription
@@ -105,8 +108,9 @@ module.exports.login = async (req, res) => {
         .json({ message: "Email ou mot de passe incorrect ! " });
 
     // si le mot de passe correspond, on cree le token
-    const token = createToken(user);
-    res.cookie("jwt", token, { httpOnly: true, maxAge });
+    //const token = createToken(user);
+    //res.cookie("jwt", token, { httpOnly: true, maxAge });
+
     // ici on envoie le message de réussite
     res.status(200).json({
       message: "Connexion réussie !",
