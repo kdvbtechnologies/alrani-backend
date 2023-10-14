@@ -36,38 +36,103 @@ const UserSchema = new mongoose.Schema(
     utilisateur: {
       type: String,
     },
-	
-	ageAuteur: {
+
+    ageAuteur: {
       type: String,
     },
-	
-	genreAuteur: {
+
+    genreAuteur: {
       type: String,
     },
 
     paysAuteur: {
       type: String,
     },
-	
-	paragrapheHistoire: {
+
+    paragrapheHistoire: {
       type: String,
     },
 
-	serviceOuOccupation: {
+    serviceOuOccupation: {
       type: String,
     },
-	
+
     enLigne: {
       type: String,
     },
-	
-	buttonActiverSurLeProfil: {
+
+    buttonActiverSurLeProfil: {
       type: String,
     },
-	
-	visible: {
+
+    visible: {
       type: String,
     },
+
+    // moyen de paiement
+    // moyen de paiement
+    // moyen de paiement de son numero virtuel sur Alrani
+    idPaymentMethod: {
+      type: String,
+    },
+
+    namePaymentMethod: {
+      type: String,
+    },
+
+    idUserPaymentMethod: {
+      type: String,
+    },
+
+    nameUserPaymentMethod: {
+      type: String,
+    },
+    // moyen de paiement
+
+    // monetization - alrani monetization
+    // monetization - alrani monetization
+    balanceAlraniMonetization: {
+      type: String,
+    },
+
+    balanceAlraniMonetizationDeals: {
+      type: String,
+    },
+
+    balanceAlraniMonetizationFormation: {
+      type: String,
+    },
+    // monetization - alrani monetization
+
+    // Plus - alrani Plus
+    // Plus - alrani Plus
+    balanceAlraniPlus: {
+      type: String,
+    },
+
+    balanceAlraniPlusDeals: {
+      type: String,
+    },
+
+    balanceAlraniPlusFormation: {
+      type: String,
+    },
+    // Plus - alrani Plus
+
+    // Collaborator - alrani Collaborator
+    // Collaborator - alrani Collaborator
+    balanceAlraniCollaborator: {
+      type: String,
+    },
+
+    balanceAlraniCollaboratorDeals: {
+      type: String,
+    },
+
+    balanceAlraniCollaboratorFormation: {
+      type: String,
+    },
+    // Collaborator - alrani Collaborator
   },
   { timestamps: true }
 );

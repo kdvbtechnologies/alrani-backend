@@ -204,6 +204,28 @@ module.exports.updateUserInfos = async (req, res) => {
     enLigne,
     buttonActiverSurLeProfil,
     visible,
+
+    // moyen de paiement
+    // moyen de paiement de son numero virtuel sur Alrani
+    paymentMethod,
+    namePaymentMethod,
+    idUserPaymentMethod,
+    nameUserPaymentMethod,
+
+    // monetization - alrani monetization
+    balanceAlraniMonetization,
+    balanceAlraniMonetizationDeals,
+    balanceAlraniMonetizationFormation,
+
+    // Plus - alrani Plus
+    balanceAlraniPlus,
+    balanceAlraniPlusDeals,
+    balanceAlraniPlusFormation,
+
+    // Collaborator - alrani Collaborator
+    balanceAlraniCollaborator,
+    balanceAlraniCollaboratorDeals,
+    balanceAlraniCollaboratorFormation,
   } = req.body;
 
   try {
@@ -225,6 +247,28 @@ module.exports.updateUserInfos = async (req, res) => {
         enLigne,
         buttonActiverSurLeProfil,
         visible,
+
+        // moyen de paiement
+        // moyen de paiement de son numero virtuel sur Alrani
+        paymentMethod,
+        namePaymentMethod,
+        idUserPaymentMethod,
+        nameUserPaymentMethod,
+
+        // monetization - alrani monetization
+        balanceAlraniMonetization,
+        balanceAlraniMonetizationDeals,
+        balanceAlraniMonetizationFormation,
+
+        // Plus - alrani Plus
+        balanceAlraniPlus,
+        balanceAlraniPlusDeals,
+        balanceAlraniPlusFormation,
+
+        // Collaborator - alrani Collaborator
+        balanceAlraniCollaborator,
+        balanceAlraniCollaboratorDeals,
+        balanceAlraniCollaboratorFormation,
       });
       res.status(200).json({
         message: "Success !",
