@@ -89,47 +89,43 @@ const UserSchema = new mongoose.Schema(
     },
     // moyen de paiement
 
-    // monetization - alrani monetization
-    // monetization - alrani monetization
-    balanceAlraniMonetization: {
-      type: String,
-    },
-
-    balanceAlraniMonetizationDeals: {
-      type: String,
-    },
-
-    balanceAlraniMonetizationFormation: {
-      type: String,
-    },
-    // monetization - alrani monetization
-
     // Plus - alrani Plus
     // Plus - alrani Plus
-    balanceAlraniPlus: {
+    balancePlusDeals: {
       type: String,
     },
 
-    balanceAlraniPlusDeals: {
-      type: String,
-    },
-
-    balanceAlraniPlusFormation: {
+    balancePlusFormation: {
       type: String,
     },
     // Plus - alrani Plus
+
+    // monetization - alrani monetization
+    // monetization - alrani monetization
+    balanceMonetization: {
+      type: String,
+    },
+
+    balanceMonetizationDeals: {
+      type: String,
+    },
+
+    balanceMonetizationFormation: {
+      type: String,
+    },
+    // monetization - alrani monetization
 
     // Collaborator - alrani Collaborator
     // Collaborator - alrani Collaborator
-    balanceAlraniCollaborator: {
+    balanceCollaborator: {
       type: String,
     },
 
-    balanceAlraniCollaboratorDeals: {
+    balanceCollaboratorDeals: {
       type: String,
     },
 
-    balanceAlraniCollaboratorFormation: {
+    balanceCollaboratorFormation: {
       type: String,
     },
     // Collaborator - alrani Collaborator

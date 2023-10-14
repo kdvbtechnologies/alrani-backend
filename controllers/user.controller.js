@@ -207,25 +207,24 @@ module.exports.updateUserInfos = async (req, res) => {
 
     // moyen de paiement
     // moyen de paiement de son numero virtuel sur Alrani
-    paymentMethod,
+    idPaymentMethod,
     namePaymentMethod,
     idUserPaymentMethod,
     nameUserPaymentMethod,
 
-    // monetization - alrani monetization
-    balanceAlraniMonetization,
-    balanceAlraniMonetizationDeals,
-    balanceAlraniMonetizationFormation,
-
     // Plus - alrani Plus
-    balanceAlraniPlus,
-    balanceAlraniPlusDeals,
-    balanceAlraniPlusFormation,
+    balancePlusDeals,
+    balancePlusFormation,
+
+    // monetization - alrani monetization
+    balanceMonetization,
+    balanceMonetizationDeals,
+    balanceMonetizationFormation,
 
     // Collaborator - alrani Collaborator
-    balanceAlraniCollaborator,
-    balanceAlraniCollaboratorDeals,
-    balanceAlraniCollaboratorFormation,
+    balanceCollaborator,
+    balanceCollaboratorDeals,
+    balanceCollaboratorFormation,
   } = req.body;
 
   try {
@@ -250,25 +249,24 @@ module.exports.updateUserInfos = async (req, res) => {
 
         // moyen de paiement
         // moyen de paiement de son numero virtuel sur Alrani
-        paymentMethod,
+        idPaymentMethod,
         namePaymentMethod,
         idUserPaymentMethod,
         nameUserPaymentMethod,
 
-        // monetization - alrani monetization
-        balanceAlraniMonetization,
-        balanceAlraniMonetizationDeals,
-        balanceAlraniMonetizationFormation,
-
         // Plus - alrani Plus
-        balanceAlraniPlus,
-        balanceAlraniPlusDeals,
-        balanceAlraniPlusFormation,
+        balancePlusDeals,
+        balancePlusFormation,
+
+        // monetization - alrani monetization
+        balanceMonetization,
+        balanceMonetizationDeals,
+        balanceMonetizationFormation,
 
         // Collaborator - alrani Collaborator
-        balanceAlraniCollaborator,
-        balanceAlraniCollaboratorDeals,
-        balanceAlraniCollaboratorFormation,
+        balanceCollaborator,
+        balanceCollaboratorDeals,
+        balanceCollaboratorFormation,
       });
       res.status(200).json({
         message: "Success !",
