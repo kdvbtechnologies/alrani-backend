@@ -2,31 +2,27 @@ const mongoose = require("mongoose");
 
 const CommentSchema = new mongoose.Schema(
   {
-    idDeLaPersonneQuiACommenter: {
+    comment: {
       type: String,
     },
 
-    nomDeLaPersonneQuiACommenter: {
+    idOwner: {
       type: String,
     },
 
-    paysDeLaPersonneQuiACommenter: {
+    nameOwner: {
       type: String,
     },
 
-    photoProfil: {
+    photoOwner: {
       type: String,
     },
 
-    badgeVerified: {
+    badgeOwner: {
       type: String,
     },
 
-    commentaire: {
-      type: String,
-    },
-
-    reponseCommentaire: {
+    countryOwner: {
       type: String,
     },
 
@@ -34,7 +30,11 @@ const CommentSchema = new mongoose.Schema(
       type: String,
     },
 
-    idDuProprietaireDuPost: {
+    idOwnerPost: {
+      type: String,
+    },
+
+    verifyReply: {
       type: String,
     },
 
