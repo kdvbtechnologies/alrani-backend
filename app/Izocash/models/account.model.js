@@ -71,6 +71,10 @@ const AccountSchema = new mongoose.Schema(
       type: String,
     },
 
+    connection: {
+      type: String,
+    },
+
     // type=1, compte personnel
     // type=2, compte agence
     type: {

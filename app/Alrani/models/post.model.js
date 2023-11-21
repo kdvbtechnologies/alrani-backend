@@ -45,6 +45,10 @@ const PostSchema = new mongoose.Schema(
 	  coverVideo: {
       type: String,
     },
+
+    connection: {
+      type: String,
+    },
 	
     type: {
       type: String,

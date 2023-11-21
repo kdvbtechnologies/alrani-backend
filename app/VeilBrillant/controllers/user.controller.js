@@ -4,7 +4,7 @@ const bcryptjs = require("bcryptjs");
 // inscription
 // inscription
 module.exports.signup = async (req, res) => {
-  const { nameUser, virtualNumber, password, } = req.body;
+  const { nameUser, virtualNumber, password, connection } = req.body;
   // on verifie en fonction du numero virtuel si la personne ne s'etait pas deja inscrite auparavant
   const user = await userModel.findOne({ virtualNumber }).exec();
   if (user) {
@@ -22,6 +22,7 @@ module.exports.signup = async (req, res) => {
       nameUser,
       virtualNumber,
       password: hashedPassword,
+      connection,
     });
     res.status(200).json({
       message: "Inscription réussi avec succès ! ",

@@ -110,6 +110,4 @@ app.use("/api1/accountVS", accountRouteVS);
 app.use("/api1/userVS", userRouteVS);
 
 
-app.listen(5500, console.log("server 5500 is running"));
-
-//npm uninstall jsonwebtoken
+app.listen(5500, console.log("server 5500 is running. virtual-phone-1-backend"));

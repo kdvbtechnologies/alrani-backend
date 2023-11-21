@@ -46,6 +46,10 @@ const ZoneSchema = new mongoose.Schema(
     hide: {
       type: String,
     },
+
+    connection: {
+      type: String,
+    },
     
     type: {
       type: String,

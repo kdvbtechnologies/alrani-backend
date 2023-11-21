@@ -35,6 +35,10 @@ const CountrySchema = new mongoose.Schema(
       type: String,
     },
 
+    connection: {
+      type: String,
+    },
+
     type: {
       type: String,
     },

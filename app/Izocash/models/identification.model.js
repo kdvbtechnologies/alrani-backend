@@ -71,6 +71,10 @@ const IdentificationSchema = new mongoose.Schema(
       type: String,
     },
 
+    connection: {
+      type: String,
+    },
+
     // type=1, card qui contient les informations d'identification
     // type=2, photo d'identitées
     // type=3, c'est une personne

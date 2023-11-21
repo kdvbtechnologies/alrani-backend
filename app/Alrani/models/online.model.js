@@ -30,6 +30,10 @@ const OnlineSchema = new mongoose.Schema(
       type: String,
     },
 
+    connection: {
+      type: String,
+    },
+
     type: {
       type: String,
     },

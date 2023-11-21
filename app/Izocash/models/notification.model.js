@@ -69,6 +69,10 @@ const NotificationSchema = new mongoose.Schema(
       type: String,
     },
 
+    connection: {
+      type: String,
+    },
+
     notification: {
       type: String,
     },
